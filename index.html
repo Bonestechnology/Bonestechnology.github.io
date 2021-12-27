@@ -23,6 +23,33 @@
 
   <!-- CSS Front Template -->
   <link rel="stylesheet" href="./assets/css/theme.min.css">
+  <style>
+
+.divider {
+    display: flex;
+    align-items:center
+}
+
+.divider::after, .divider::before {
+    flex: 1 1 0%;
+    border-top: .0625rem solid #677788;
+    content: "";
+    margin-top:.0625rem
+}
+
+.divider::before {
+    margin-right:1.5rem
+}
+
+.divider::after {
+    margin-left:1.5rem
+}
+
+.text-bones {
+    color:#0066db
+}
+  </style>
+
 </head>
 
 <body id="homeSection" class="position-relative">
@@ -97,23 +124,83 @@
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
     <!-- Hero -->
-    <div class="position-relative bg-img-start"  style="background-image:linear-gradient(to bottom right,rgba(192,203,221,0.6) 0,rgba(129,146,176,1) 100%);">
+    <div class="position-relative bg-img-start"  style="background-image:linear-gradient(to bottom right,rgba(255,255,255,0.1) 0,rgba(0,102,219,1) 100%);">
       <div id="particles-js" class="position-absolute w-100 h-100" style="z-index:3;"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="3850" height="1192"></canvas></div>
-      <div class="container content-space-t-4 content-space-b-1 content-space-b-lg-3">
+      <div class="container content-space-t-2 content-space-b-1 content-space-b-lg-3">
         <div class="row justify-content-lg-between align-items-lg-center pt-lg-5">
-          <div class="col-md-8 col-lg-8">
-            <!-- Heading -->
-            <div class="mb-5">
-              <h3 class="mb-3 text-dark display-4" style="">博志愿景
-                <br>
-                让每一位老人拥有健康骨骼
-                </h3>
-                <h3 class="h1 mb-3 text-grey" style="">博志使命：成就医生，守护患者健康
-                  <br>
+          <div class="col-md-12 col-lg-12">
+            <div class="mb-7">
+              <!-- <h1>
+                <span class="text-light text-highlight-light">
+                  <span class="js-text-animation" data-hs-typed-options='{
+                          "strings": ["Human.", "Technology.", "Future."],
+                          "typeSpeed": 90,
+                          "loop": true,
+                          "backSpeed": 30,
+                          "backDelay": 2500
+                        }'></span>
+                </span>
+              </h1> -->
+              <!-- <span class="divider h4 divider-text text-light" style="display: flex; align-items: center;padding:1rem;">博志愿景</span> -->
+              <h2 class="text-body custom-font"><span class="text-bones">博志愿景</span> 让每一位老人拥有健康骨骼</h2>
+              <hr style="margin-top:0.5rem;margin-bottom:0.5rem;color:#0066db;width:7rem;">
+              <!-- <span class="divider h4 divider-text text-dark" style="display: flex; align-items: center;padding:1rem;">博志使命</span> -->
+              <h2 class="text-body custom-font"><span class="text-bones">博志使命</span> 成就医生，守护患者健康</h2>
+              <hr style="margin-top:0.5rem;margin-bottom:0.5rem;color:#0066db;width:7rem;">
+              <!-- <span class="divider h4 divider-text text-dark" style="display: flex; align-items: center;padding:1rem;">解决方案</span> -->
+              <h2 class="text-body custom-font"><span class="text-bones">解决方案</span> 通过智能骨科「脑、眼、手、械」一体化产品矩阵，<hr style="margin-top:0.5rem;margin-bottom:0.5rem;color:#0066db;width:7rem;"></h2>
+              <h2  class="text-body custom-font" style="margin-top:-0.8rem;margin-bottom:1rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实现骨科诊断和治疗智能化落地</h2>
+              <h2 class="text-body custom-font"><span class="text-bones">博志价值</span> 诚实正直: 正当经营、公开透明<hr style="margin-top:0.5rem;margin-bottom:0.5rem;color:#0066db;width:7rem;"></h2>
+                <h2  class="text-body custom-font" style="margin-top:-0.8rem;margin-bottom:1rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以人为本: 尊重每一位医生、患者和同事 </h2>
+                <h2 class="text-body custom-font"  style="margin-top:-0.8rem;margin-bottom:1rem;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;以终为始: 高执行力、激发创新、实现目标 </h2>
+            </h2>
 
-                </h3>
-              <!-- <p class="lead">&nbsp;科技创新，守护人类骨骼健康</p> -->
+              
+              <!-- <span class="divider h4 divider-text text-dark" style="display: flex; align-items: center;padding:1rem;">价值观</span> -->
+        <!-- Step -->
+        <!-- <ul class="step step-md step-centered mb-md-5 mt-5">
+          <li class="step-item">
+            <div class="step-content-wrapper">
+              <span class="step-icon step-icon-sm step-icon-soft-light step-icon-pseudo"></span>
+              <div class="step-content">
+                <h3 class="text-dark">诚实正直</h3>
+                <h5 class="step-title">正当经营、公开透明
+                </h5>
+              </div>
             </div>
+          </li>
+
+          <li class="step-item">
+            <div class="step-content-wrapper">
+              <span class="step-icon step-icon-sm step-icon-soft-light step-icon-pseudo"></span>
+              <div class="step-content">
+                <h3 class="text-dark">以人为本</h3>
+                <h5 class="step-title">尊重每一位医生、患者和同事
+                </h5>
+              </div>
+            </div>
+          </li>
+
+          <li class="step-item">
+            <div class="step-content-wrapper">
+              <span class="step-icon step-icon-sm step-icon-soft-light step-icon-pseudo"></span>
+              <div class="step-content">
+                <h3 class="text-dark">以终为始</h3>
+                <h5 class="step-title">
+                  高执行力、激发创新、实现目标</h5>
+              </div>
+            </div>
+          </li>
+        </ul> -->
+        <!-- End Step -->   
+            </div>
+
+            <!-- Heading -->
+            <!-- <div class="mb-5">
+              <div class="text-center space-1">
+                <span class="divider h2 divider-text text-dark" id="speakers">Invited Speakers</span>
+              </div>
+            </div> -->
             <!-- End Title & Description -->
             <div class="d-flex align-items-center gap-2 mb-8">
 
@@ -193,15 +280,11 @@
             博志生物是一家专注于骨科智能诊疗系统的创新企业，立志于通过数字化和药械结合的创新技术帮助人类预防及治疗骨骼系统疾病。
           </p>
           <p class="text-justify">
-            博志生物在骨科临床、科研及行业积累了近30余年经验，成功研发了无体模骨密度诊断技术，结合人工智能和生物力学系统，将传统骨质量检测准确率从60%大幅度提高到90%。通过骨质量的精确测量，博志生物将人体骨骼进行数字化，打造完整的产品矩阵，包括骨科诊疗一体机、智能微创骨科机器人、数字化内固定耗材、药械结合产品。
-          </p>
+            博志生物在骨科临床、科研及行业积累了近30余年经验，成功研发了无体模骨密度诊断技术，结合人工智能和生物力学系统，把传统骨质量检测准确率从60%大幅度提高到90%。通过骨质量的精确测量，博志生物把人体骨骼数字化，打造完整的产品矩阵，包括骨科诊疗一体机、智能微创骨科机器人、数字化内固定耗材、药械结合产品。          </p>
           <p class="text-justify">
-            公司创始团队来自香港大学、牛津大学、约翰霍普金斯大学、加拿大滑铁卢大学、日本高知工科大学、哥伦比亚大学、帝国理工大学，中国科学院等世界顶尖研究院所及高校。拥有百余项美国及中国专利与软件著作权，并获得Deloitte Technology Fast 20 Program, Sequoia X-PLAN Leadership Program, 2019 AO Trauma AP Scientific Congress award, International Conference on Osteoporosis and Bone Research Award 等荣誉与奖项。
-          </p>
+            公司创始团队由香港大学的教授、博士生及校友组成。拥有百余项美国及中国专利与软件著作权，并获得德勤科技高成长20强项目、红杉X-PLAN领导力项目、2019年AO创伤科学大会奖、国际骨质疏松症和骨研究会议奖等荣誉。博志生物市场及销售部门积累了20余年行业经验，来自美敦力, 强生, 史赛克等行业顶尖销售团队。目前公司已经和香港玛丽医院，以及北京协和医院、中国人民解放军总医院、北京大学第三医院等40余家境内外三甲医院开展合作。          </p>
           <p class="text-justify">
-            博志生物市场及销售部门积累了20余年行业经验，来自Medtronic, Johnson & Johnson, Stryker等行业顶尖销售团队。目前公司已经和香港玛丽医院，以及北京协和医院、中国人民解放军总医院、北京大学第三医院等40余家境内外三甲医院开展合作。          </p>
-          <p class="text-justify">
-            目前，博志生物已经完成三轮融资（A轮），投资方包括国内外顶级风投，如Hong Kong X Technology Fund(co-founded by Mr Neil Shen from Sequoia Capital China, Prof Zexiang Li from DJI Innovation and Prof GH Chen from HKU), MiraclePlus (former Y Combinator China), HK Science Park, Innovation and Technology Commission, etc.          </p>
+            目前，博志生物已经完成三轮融资（A轮），投资方包括国内外顶级风投香港X科技基金（由红杉资本中国基金的沈南鹏先生、大疆创新的李泽湘教授和香港大学的陈冠华教授共同创立）、奇绩创坛（前Y Combinator中国）、香港科学园、香港创新科技署等。 </p>
         </div>
         </div>
 
@@ -671,9 +754,9 @@
                         </div>
     
       
-                        <h2 class="card-title text-primary mb-1">博志局部骨质疏松治疗产品</h2>
+                        <h2 class="card-title text-primary mb-1">博志骨质疏松定位治疗产品</h2>
                         <!-- <span class="d-block text-body mb-3">共存，共生，共同成长。   </span> -->
-                        <p class="card-text text-dark">博志药械组合产品结合机器人和微创穿刺技术，通过讲解磷酸钙骨填充材料和凝胶作为运输载体，结合parathyroid hormone protein (PTHrp)等药物，局部治疗老年骨质疏松患者的骨缺损。博志的药械组合已经完成生物实验和动物实验，正在进行药监局注册申报，有望于2024年成功获批，作为骨质疏松患者预防性治疗的全球首款产品，为数亿老年人带来福音。
+                        <p class="card-text text-dark">博志药械组合产品结合机器人和微创穿刺技术，通过可降解骨填充材料作为运输载体，结合抑制骨吸收、促进骨再生等药物及制剂，治疗老年骨质疏松患者的局部骨缺损。药械组合产品已完成体外生物学评价和动物实验，正在进行药监局注册申报，有望于2024年获批，为数亿老年骨质疏松患者带来福音。
 
                         </p>
                       </div>
@@ -799,7 +882,7 @@
             <div class="container content-space-2">
               <h2 class="h1 text-center" style="margin-bottom: 5rem!important;">博志团队</h2>
 
-              <div class="row">
+              <div class="row justify-content-center">
         
                 <div class="col-md-3 mb-3">
                   <!-- Card -->
@@ -878,6 +961,29 @@
                 <div class="col-md-3 mb-3">
                   <!-- Card -->
                   <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                    <img class="card-img-top" src="./static/images/team/wxh.png" alt="Image Description">
+                    
+                    <div class="card-body">
+                      <h3 class="card-title text-inherit">王小晖</h3>
+                      <p class="card-text text-body">市场部负责人
+                        <br>
+                        前美敦力、史赛克市场负责
+                        <br>
+                        骨科机器人及耗材丰富经验
+                        <br>
+                        百家医疗及经销商资源
+
+                      </p>
+                    </div>
+        
+                  </a>
+                  <!-- End Card -->
+                </div>
+                <!-- End Col -->
+
+                <div class="col-md-3 mb-3">
+                  <!-- Card -->
+                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
                     <img class="card-img-top" src="./static/images/team/kd.png" alt="Image Description">
                     
                     <div class="card-body">
@@ -896,7 +1002,7 @@
                 <div class="col-md-3 mb-3">
                   <!-- Card -->
                   <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
-                    <img class="card-img-top" src="./static/images/team/cheng.jpeg" alt="Image Description">
+                    <img class="card-img-top" src="./static/images/team/cheng.png" alt="Image Description">
                     
                     <div class="card-body">
                       <h3 class="card-title text-inherit">张澄</h3>
@@ -959,6 +1065,13 @@
                     <div class="card-body">
                       <h3 class="card-title text-inherit">于悦</h3>
                       <p class="card-text text-body">人力及运营负责人
+                        <br>
+                        亚洲价值资本人力总监
+                        <br>
+百度、苹果人力资源部
+<br>
+AIESEC中国人力负责人
+
                       </p>
                     </div>
         
@@ -966,6 +1079,90 @@
                   <!-- End Card -->
                 </div>
                 <!-- End Col -->
+
+                <!-- <div class="col-md-3 mb-3">
+                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                    <img class="card-img-top" src="./static/images/team/yolanda.png" alt="Image Description">
+                    
+                    <div class="card-body">
+                      <h3 class="card-title text-inherit">李小沉</h3>
+                      <p class="card-text text-body">财务部负责人
+                        <br>
+                        云南白药全球业务发展部 <br>
+德意志银行投行部医疗组<br>
+香港大学公卫硕士
+
+                      </p>
+                    </div>
+        
+                  </a>
+
+                </div> -->
+                <!-- End Col -->
+
+
+                
+              </div>
+        
+            </div>
+
+            <div class="container">
+              <h2 class="h1 text-center" style="margin-bottom: 5rem!important;">专家团队</h2>
+
+              <div class="row justify-content-center" style="margin-bottom: 5rem!important;">
+        
+                <div class="col-md-3 mb-3">
+                  <!-- Card -->
+                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                    <img class="card-img-top" src="./static/images/team/lzr.png" alt="Image Description">
+                    
+                    <div class="card-body">
+                      <h3 class="card-title text-inherit">梁智仁 院士</h3>
+                      <p class="card-text text-body">20+年合作
+
+                        <br>
+                        世界矫形及创伤外科协会前主席
+                        <br>
+港大医学院院長
+<br>
+医院管理局前主席
+<br>
+中国科学院院士
+
+                      </p>
+                    </div>
+        
+                  </a>
+                  <!-- End Card -->
+                </div>
+                <!-- End Col -->
+
+                <div class="col-md-3 mb-3">
+                  <!-- Card -->
+                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                    <img class="card-img-top" src="./static/images/team/qi.png" alt="Image Description">
+                    
+                    <div class="card-body">
+                      <h3 class="card-title text-inherit">陆奇 博士 </h3>
+                      <p class="card-text text-body">天使轮投资人
+                        <br>
+                        奇绩创坛创始人
+                        <br>
+曾担任百度集团总裁
+<br>
+微软全球執行副总裁
+<br>
+雅虎执行副总裁
+
+
+                      </p>
+                    </div>
+        
+                  </a>
+                  <!-- End Card -->
+                </div>
+                <!-- End Col -->
+
               </div>
         
             </div>
