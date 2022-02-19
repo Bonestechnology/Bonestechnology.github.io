@@ -28,6 +28,26 @@
   <link rel="stylesheet" href="./assets/css/theme.min.css">
   
   <style>
+
+    @font-face {
+      font-family: 'pingfang';
+      src: url('./static/font/PingFang.ttc') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'source';
+      src: url('./static/font/SourceHanSansSC-Light.otf') format('truetype');
+    }
+
+    body {
+      font-family: 'source';
+    }
+
+    .custom-font {
+      font-family: 'pingfang';
+      font-size: 80px;
+    }
+
     h4:hover {
       color: #1e2022 ! important;
     }
@@ -53,12 +73,27 @@
     }
 
     .text-bones {
-        color:#0066db
+        color:#0066da
+    }
+
+    .bg-bones {
+        background-color:#0066da
     }
 
     .avatar-xxxxl {
       width: 10rem;
       height: 10rem;
+    }
+
+    /* Cursor */
+    .typed-cursor {
+      font-size: 10rem;
+      color: #D93034;
+    }
+
+    .product-avatar {
+      font-size: 10rem;
+      color: #D93034;
     }
   </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -121,21 +156,18 @@
                   <!-- Promo Item -->
                   <div class="navbar-dropdown-menu-promo-item">
                     <!-- Promo Link -->
-                    <a class="navbar-dropdown-menu-promo-link active" href="./index.html">
+                    <a class="navbar-dropdown-menu-promo-link" href="./index.html">
                       <div class="d-flex">
                         <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.6 5.59998L20.9 10.9C21.3 11.3 21.3 11.9 20.9 12.3L17.6 15.6L11.6 9.59998L15.6 5.59998ZM2.3 12.3L7.59999 17.6L11.6 13.6L5.59999 7.59998L2.3 10.9C1.9 11.3 1.9 11.9 2.3 12.3Z" fill="#035A4B"/>
-                            <path opacity="0.3" d="M17.6 15.6L12.3 20.9C11.9 21.3 11.3 21.3 10.9 20.9L7.59998 17.6L13.6 11.6L17.6 15.6ZM10.9 2.3L5.59998 7.6L9.59998 11.6L15.6 5.6L12.3 2.3C11.9 1.9 11.3 1.9 10.9 2.3Z" fill="#035A4B"/>
-                            </svg>
+                            <img class="avatar avatar-lg avatar-4x3" src="static/images/product/robot.png" alt="Image Description">
 
                           </span>
                         </div>
 
                         <div class="flex-grow-1 ms-3">
-                          <span class="navbar-dropdown-menu-media-title">Main</span>
-                          <p class="navbar-dropdown-menu-media-desc">Over 60 corporate, agency, portfolio, account and many more pages.</p>
+                          <span class="navbar-dropdown-menu-media-title">博志微创手术机器人系列</span>
+                          <p class="navbar-dropdown-menu-media-desc">思考，看见，触手可及。</p>
                         </div>
                       </div>
                     </a>
@@ -150,17 +182,14 @@
                       <div class="d-flex">
                         <div class="flex-shrink-0">
                           <span class="svg-icon svg-icon-sm text-primary">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 3C5.67157 3 5 3.67157 5 4.5V6H3.5C2.67157 6 2 6.67157 2 7.5C2 8.32843 2.67157 9 3.5 9H5V19.5C5 20.3284 5.67157 21 6.5 21C7.32843 21 8 20.3284 8 19.5V9H20.5C21.3284 9 22 8.32843 22 7.5C22 6.67157 21.3284 6 20.5 6H8V4.5C8 3.67157 7.32843 3 6.5 3Z" fill="#035A4B"/>
-                            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M20.5 11H10V17.5C10 18.3284 10.6716 19 11.5 19H15.5C17.3546 19 19.0277 18.2233 20.2119 16.9775C20.1436 16.9922 20.0727 17 20 17C19.4477 17 19 16.5523 19 16V13C19 12.4477 19.4477 12 20 12C20.5523 12 21 12.4477 21 13V15.9657C21.6334 14.9626 22 13.7741 22 12.5C22 11.6716 21.3284 11 20.5 11Z" fill="#035A4B"/>
-                            </svg>
+                            <img class="avatar avatar-lg avatar-4x3" src="static/images/product/p5.png" alt="Image Description">
 
                           </span>
                         </div>
 
                         <div class="flex-grow-1 ms-3">
-                          <span class="navbar-dropdown-menu-media-title">Real Estate</span>
-                          <p class="navbar-dropdown-menu-media-desc">Find the latest homes for sale, real estate market data.</p>
+                          <span class="navbar-dropdown-menu-media-title">骨科诊疗一体机 PACS</span>
+                          <p class="navbar-dropdown-menu-media-desc">医疗器械注册证（粤械注准 20202212009）</p>
                         </div>
                       </div>
                     </a>
@@ -384,31 +413,32 @@
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
     <!-- Hero -->
-    <div class="container content-space-t-4 content-space-b-1 content-space-b-sm-2">
-      <div class="w-lg-75">
-        <h1 class="display-3 mb-5">
-          让每一位老人拥有
+    <div class="container content-space-t-4 mb-3">
+      <div class="w-lg-100">
+        <h1 class="display-3 mb-5" style="margin-top:-6rem!important">
+          
           <span class="text-primary text-highlight-warning">
-            <span class="js-typedjs"
+            <span class="js-typedjs text-bones"
                   data-hs-typed-options='{
-                    "strings": ["健康", "快乐", "强健"],
+                    "strings": ["让每一位老人拥有健康快乐的骨骼", "让每一次诊疗做到优美而稳固", "成为骨科智能器械全球行业领导企业"],
                     "typeSpeed": 70,
                     "loop": true,
                     "backSpeed": 40,
-                    "backDelay": 2000
+                    "backDelay": 2000,
+                    "cursorChar": "<sup>.</sup>"
                   }'></span>
           </span>
-          <br>
-          的骨骼
+          
+          
         </h1>
         
-        <p class="lead">成为骨科智能器械全球行业领导企业。</p>
+        <!-- <p class="lead">成为骨科智能器械全球行业领导企业。</p> -->
       </div>
 
-      <div class="row mb-5 mb-md-0">
-        <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+      <div class="row mb-sm-3 mb-md-0">
+        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
           <!-- Card -->
-          <div class="card card-sm h-100">
+          <div class="card card-sm h-100 shadow-none">
             <div class="p-2">
               <img class="card-img" src="./assets/img/480x220/img1.jpg" alt="Image Description">
             </div>
@@ -426,9 +456,9 @@
         </div>
         <!-- End Col -->
 
-        <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
           <!-- Card -->
-          <div class="card card-sm h-100">
+          <div class="card card-sm h-100 shadow-none">
             <div class="p-2">
               <img class="card-img" src="./assets/img/480x220/img2.jpg" alt="Image Description">
             </div>
@@ -446,9 +476,9 @@
         </div>
         <!-- End Col -->
 
-        <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+        <div class="col-sm-6 col-lg-3 mb-3 mb-lg-0">
           <!-- Card -->
-          <div class="card card-sm h-100">
+          <div class="card card-sm h-100 shadow-none">
             <div class="p-2">
               <img class="card-img" src="./assets/img/480x220/img2.jpg" alt="Image Description">
             </div>
@@ -467,7 +497,7 @@
 
         <div class="col-sm-6 col-lg-3">
           <!-- Card -->
-          <div class="card card-sm h-100">
+          <div class="card card-sm h-100 shadow-none">
             <div class="p-2">
               <img class="card-img" src="./assets/img/480x220/img3.jpg" alt="Image Description">
             </div>
@@ -506,17 +536,17 @@
                    "videoId": "./assets/video/surgispace"
                  }'></div>
     
-            <div class="video-bg-replacer-img rounded" style="background-image: url(./assets/video/working-in-office.png);"></div>
+            <div class="video-bg-replacer-img" style="background-image: url(./assets/video/working-in-office.png);"></div>
           </div>
         </div>
         <!-- End Video Background -->
     
         <!-- Clients -->
-        <div class="container content-space-b-2 content-space-b-lg-3">
+        <div class="container content-space-b-1 content-space-b-lg-1">
           <div class="row">
             <div class="col-md-4 pt-7 pt-md-0">
               <!-- Card -->
-              <div class="card bg-primary shadow-lg mt-md-n10" data-aos="fade-up">
+              <div class="card bg-primary shadow-lg mt-md-n10" data-aos="fade-up" style="background-color:#0066da !important">
                 <div class="card-body">
                   <div class="mb-7">
                     <span class="card-subtitle text-warning">为何成为投资者与合作伙伴的选择?</span>
@@ -538,35 +568,36 @@
             <div class="col-md-8 pt-7">
               <div class="row">
                 <div class="col-4 py-3">
-                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./assets/svg/brands/amazon-gray.svg" alt="Logo">
+                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./static/images/investor/sequoia.png" alt="Logo">
                 </div>
                 <!-- End Col -->
     
                 <div class="col-4 py-3">
-                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./assets/svg/brands/kaplan-gray.svg" alt="Logo">
+                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./static/images/investor/shukun.png" alt="Logo">
                 </div>
                 <!-- End Col -->
     
                 <div class="col-4 py-3">
-                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./assets/svg/brands/embark-gray.svg" alt="Logo">
+                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./static/images/investor/hongkongx.png" alt="Logo">
                 </div>
                 <!-- End Col -->
     
                 <div class="col-4 py-3">
-                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./assets/svg/brands/google-gray.svg" alt="Logo">
+                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./static/images/investor/qiji.png" alt="Logo">
                 </div>
                 <!-- End Col -->
     
                 <div class="col-4 py-3">
-                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./assets/svg/brands/airbnb-gray.svg" alt="Logo">
+                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./static/images/investor/hk1.png" alt="Logo">
                 </div>
                 <!-- End Col -->
     
                 <div class="col-4 py-3">
-                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./assets/svg/brands/shopify-gray.svg" alt="Logo">
+                  <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./static/images/investor/hk2.png" alt="Logo">
                 </div>
                 <!-- End Col -->
-    
+                
+                
                 <div class="col-4 py-3">
                   <img class="avatar avatar-lg avatar-4x3 avatar-centered" src="./assets/svg/brands/vidados-gray.svg" alt="Logo">
                 </div>
@@ -652,73 +683,137 @@
       <div class="border-top mx-auto mt-10 mb-10" style="max-width: 25rem;"></div>
 
       <div class="row justify-content-lg-between align-items-lg-start" style="padding-top: 2rem!important;padding-bottom: 1rem!important;">
-        <div class="col-lg-5 col-xl-5">
-          <!-- SVG Element -->
-          <div class="position-relative mx-auto mb-3">
 
-            <img src="static/images/background/l3.png" alt="" style="width:100%;" class="rounded-3">
-          </div>
-          <!-- End SVG Element -->
-        </div>
-        <!-- End Col -->
-
-        <div class="col-lg-7 mb-9 mb-lg-0 col-xl-7">
-          <div style="padding-left:1rem;">
-          <div class="mb-3 ">
-            <h2 class="h1"  id="About">关于博志</h2>
-            <!-- <p>About Bone's</p> -->
-            <hr>
-          </div>
-          <div class="">
-          <p class="text-justify">
-            博志生物科技有限公司（Bone's Technology Limited，简称为“博志生物”）是一家专注于骨科智能诊疗系统的创新企业，立志于通过数字化和药械结合的创新技术帮助人类预防及治疗骨骼系统疾病。博志生物由香港大学教授、博士及校友创立，基于骨科临床、科研及行业的30年经验积累，全球首创亚微结构骨质量评估理论，结合人工智能和生物力学技术，将传统骨密度检测准确率从60%大幅提高至99%。基于骨质量精确评估技术，博志生物将人体骨骼数字化，通过骨科诊疗一体机、智能微创手术机器人、数字化内固定耗材、药械结合产品研发，打造完整数字化骨科产品矩阵。博志生物共拥有百余项中国及全球专利与软件著作权，并获得德勤科技高成长20强、红杉X-PLAN领导力项目、2019年AO创伤科学大会奖、国际骨质疏松症和骨研究会议奖等荣誉。
-          </p>
-        </div>
-        </div>
-
-      
-        </div>
-        <!-- End Col -->
 
       </div>
 
-          <hr>
-
-          <div class="mb-7 text-center" style="margin-top:3rem!important;">
-            <h2 class="text-dark h2">博志生物立志通过科技创新，守护人类骨骼健康</h2>
-            <!-- <h2 class="text-cap text-primary" style="font-size:1.75rem;">We aim to create happy bones for every elderly</h2> -->
+          <div class="container content-space-b-2 content-space-b-lg-3">
+            <!-- Heading -->
+            <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+              <h2 class="display-4 text-bones">「骨量-结构-强度」</h2>
+              <h2 class="text-bones">全球首创亚微结构骨质量评估理论</h2>
+            </div>
+            <!-- End Heading -->
+      
+            <div class="row mb-7">
+              <div class="col-sm-6 col-lg-3 mb-7 mb-lg-4">
+                <!-- Circle Chart -->
+                <div class="circles-chart">
+                  <div class="js-circle" data-hs-circles-options="{
+                          &quot;value&quot;: 30,
+                          &quot;maxValue&quot;: 30,
+                          &quot;duration&quot;: 1000,
+                          &quot;isViewportInit&quot;: true,
+                          &quot;colors&quot;: [&quot;#f8fafd&quot;, &quot;#0066da&quot;],
+                          &quot;radius&quot;: 100,
+                          &quot;width&quot;: 8,
+                          &quot;additionalText&quot;: &quot;年&quot;,
+                          &quot;fgStrokeLinecap&quot;: &quot;round&quot;,
+                          &quot;fgStrokeMiterlimit&quot;: &quot;10&quot;,
+                          &quot;textClass&quot;: &quot;circles-chart-content&quot;,
+                          &quot;textFontSize&quot;: 40,
+                          &quot;textFontWeight&quot;: 500,
+                          &quot;textColor&quot;: &quot;#0066da&quot;,
+                          &quot;secondaryText&quot;: &quot;科研及产品研发积累&quot;,
+                          &quot;secondaryTextColor&quot;: &quot;#0066da&quot;,
+                          &quot;secondaryTextFontSize&quot;: &quot;15&quot;,
+                          &quot;secondaryTextFontWeight&quot;: &quot;400&quot;,
+                          &quot;dividerSpace&quot;: &quot;10&quot;
+                       }" id="circle-15257927201738986"><div class="circles-wrap" style="position: relative; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path fill="transparent" stroke="#f8fafd" stroke-width="8" d="M 99.98044737244527 4.000001991173164 A 96 96 0 1 1 99.86665792594512 4.000092604777535 Z" class="circles-maxValueStroke"></path><path fill="transparent" stroke="#00c9a7" stroke-width="8" d="M 99.98044737244527 4.000001991173164 A 96 96 0 0 1 118.11125277862686 194.27609730355135 " class="circles-valueStroke" stroke-linecap="round" stroke-miterlimit="10"></path></svg><div class="circles-chart-content" style="position: absolute; text-align: center; width: 100%; font-size: 24px; height: auto; line-height: normal; font-weight: 500; color: rgb(0, 201, 167);">30年<div style="margin-top: 5px; margin-bottom: 5px;"></div><div style="font-weight: 400; font-size: 13px; color: #77838f;">科研及产品研发积累</div></div></div></div>
+                </div>
+                <!-- End Circle Chart -->
+              </div>
+              <!-- End Col -->
+      
+              <div class="col-sm-6 col-lg-3 mb-7 mb-lg-4">
+                <!-- Circle Chart -->
+                <div class="circles-chart">
+                  <div class="js-circle" data-hs-circles-options="{
+                          &quot;value&quot;: 90,
+                          &quot;maxValue&quot;: 100,
+                          &quot;duration&quot;: 1000,
+                          &quot;isViewportInit&quot;: true,
+                          &quot;colors&quot;: [&quot;#f8fafd&quot;, &quot;#0066da&quot;],
+                          &quot;radius&quot;: 100,
+                          &quot;width&quot;: 8,
+                          &quot;additionalText&quot;: &quot;%&quot;,
+                          &quot;fgStrokeLinecap&quot;: &quot;round&quot;,
+                          &quot;fgStrokeMiterlimit&quot;: &quot;10&quot;,
+                          &quot;textClass&quot;: &quot;circles-chart-content&quot;,
+                          &quot;textFontSize&quot;: 40,
+                          &quot;textFontWeight&quot;: 500,
+                          &quot;textColor&quot;: &quot;#0066da&quot;,
+                          &quot;secondaryText&quot;: &quot;骨科疾病诊断&quot;,
+                          &quot;secondaryTextColor&quot;: &quot;#0066da&quot;,
+                          &quot;secondaryTextFontSize&quot;: &quot;15&quot;,
+                          &quot;secondaryTextFontWeight&quot;: &quot;400&quot;,
+                          &quot;dividerSpace&quot;: &quot;10&quot;
+                       }" id="circle-7164853710170171"><div class="circles-wrap" style="position: relative; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path fill="transparent" stroke="#f8fafd" stroke-width="8" d="M 99.98044737244527 4.000001991173164 A 96 96 0 1 1 99.86665792594512 4.000092604777535 Z" class="circles-maxValueStroke"></path><path fill="transparent" stroke="#ffc107" stroke-width="8" d="M 99.98044737244527 4.000001991173164 A 96 96 0 1 1 22.282985041299696 43.643406899377304 " class="circles-valueStroke" stroke-linecap="round" stroke-miterlimit="10"></path></svg><div class="circles-chart-content" style="position: absolute; text-align: center; width: 100%; font-size: 24px; height: auto; line-height: normal; font-weight: 500; color: rgb(255, 193, 7);">4.84<div style="margin-top: 5px; margin-bottom: 5px;"></div><div style="font-weight: 400; font-size: 13px; color: #77838f;">骨科疾病诊断</div></div></div></div>
+                </div>
+                <!-- End Circle Chart -->
+              </div>
+              <!-- End Col -->
+      
+              <div class="col-sm-6 col-lg-3 mb-7 mb-lg-4">
+                <!-- Circle Chart -->
+                <div class="circles-chart">
+                  <div class="js-circle" data-hs-circles-options="{
+                         &quot;value&quot;: 99,
+                         &quot;maxValue&quot;: 100,
+                         &quot;duration&quot;: 1000,
+                         &quot;isViewportInit&quot;: true,
+                         &quot;colors&quot;: [&quot;#f8fafd&quot;, &quot;#0066da&quot;],
+                         &quot;radius&quot;: 100,
+                         &quot;width&quot;: 8,
+                         &quot;additionalText&quot;: &quot;%&quot;,
+                         &quot;fgStrokeLinecap&quot;: &quot;round&quot;,
+                         &quot;fgStrokeMiterlimit&quot;: &quot;10&quot;,
+                         &quot;textClass&quot;: &quot;circles-chart-content&quot;,
+                         &quot;textFontSize&quot;: 40,
+                         &quot;textFontWeight&quot;: 500,
+                         &quot;textColor&quot;: &quot;#0066da&quot;,
+                         &quot;secondaryText&quot;: &quot;骨密度检测精度&quot;,
+                         &quot;secondaryTextColor&quot;: &quot;#0066da&quot;,
+                         &quot;secondaryTextFontSize&quot;: &quot;15&quot;,
+                         &quot;secondaryTextFontWeight&quot;: &quot;400&quot;,
+                         &quot;dividerSpace&quot;: &quot;10&quot;
+                       }" id="circle-6716420589810578"><div class="circles-wrap" style="position: relative; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path fill="transparent" stroke="#f8fafd" stroke-width="8" d="M 99.98044737244527 4.000001991173164 A 96 96 0 1 1 99.86665792594512 4.000092604777535 Z" class="circles-maxValueStroke"></path><path fill="transparent" stroke="#de4437" stroke-width="8" d="M 99.98044737244527 4.000001991173164 A 96 96 0 0 1 135.23328649854963 10.69929718915354 " class="circles-valueStroke" stroke-linecap="round" stroke-miterlimit="10"></path></svg><div class="circles-chart-content" style="position: absolute; text-align: center; width: 100%; font-size: 24px; height: auto; line-height: normal; font-weight: 500; color: rgb(222, 68, 55);">6<div style="margin-top: 5px; margin-bottom: 5px;"></div><div style="font-weight: 400; font-size: 13px; color: #77838f;">months of free support to do your best work</div></div></div></div>
+                </div>
+                <!-- End Circle Chart -->
+              </div>
+              <!-- End Col -->
+      
+              <div class="col-sm-6 col-lg-3 mb-7 mb-lg-4">
+                <!-- Circle Chart -->
+                <div class="circles-chart">
+                  <div class="js-circle" data-hs-circles-options="{
+                          &quot;value&quot;: 7000,
+                          &quot;maxValue&quot;: 7000,
+                          &quot;duration&quot;: 1000,
+                          &quot;isViewportInit&quot;: true,
+                          &quot;colors&quot;: [&quot;#f8fafd&quot;, &quot;#0066da&quot;],
+                          &quot;radius&quot;: 100,
+                          &quot;width&quot;: 8,
+                          &quot;additionalText&quot;: &quot;+&quot;,
+                          &quot;fgStrokeLinecap&quot;: &quot;round&quot;,
+                          &quot;fgStrokeMiterlimit&quot;: &quot;10&quot;,
+                          &quot;textClass&quot;: &quot;circles-chart-content&quot;,
+                          &quot;textFontSize&quot;: 40,
+                          &quot;textFontWeight&quot;: 500,
+                          &quot;textColor&quot;: &quot;#0066da&quot;,
+                          &quot;secondaryText&quot;: &quot;服务患者&quot;,
+                          &quot;secondaryTextColor&quot;: &quot;#0066da&quot;,
+                          &quot;secondaryTextFontSize&quot;: &quot;15&quot;,
+                          &quot;secondaryTextFontWeight&quot;: &quot;400&quot;,
+                          &quot;dividerSpace&quot;: &quot;10&quot;
+                       }" id="circle-06236619180381464"><div class="circles-wrap" style="position: relative; display: inline-block;"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path fill="transparent" stroke="#f8fafd" stroke-width="8" d="M 99.98044737244527 4.000001991173164 A 96 96 0 1 1 99.86665792594512 4.000092604777535 Z" class="circles-maxValueStroke"></path><path fill="transparent" stroke="#377dff" stroke-width="8" d="M 99.98044737244527 4.000001991173164 A 96 96 0 0 1 129.72379005347432 191.28250820862112 " class="circles-valueStroke" stroke-linecap="round" stroke-miterlimit="10"></path></svg><div class="circles-chart-content" style="position: absolute; text-align: center; width: 100%; font-size: 24px; height: auto; line-height: normal; font-weight: 500; color: rgb(55, 125, 255);">45k+<div style="margin-top: 5px; margin-bottom: 5px;"></div><div style="font-weight: 400; font-size: 13px; color: #77838f;">users - from new startups to public companies</div></div></div></div>
+                </div>
+                <!-- End Circle Chart -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
           </div>
-
-          <div class="row pt-5 pb-3 bg-light"  style="margin-bottom:3rem!important;">
-            <div class="col-12 col-sm-4 mb-3 mb-sm-0">
-              <div class="text-center">
-                <h5 class="h1">99%</h5>
-                <p>骨质量检测精度</p>
-              </div>
-            </div>
-            <!-- End Col -->
-  
-            <div class="col-12 col-sm-4 mb-3 mb-sm-0">
-              <div class="text-center">
-                <h5 class="h1">20亿</h5>
-                <p>目标服务全球骨科患者</p>
-              </div>
-            </div>
-            <!-- End Col -->
-  
-            <div class="col-12 col-sm-4 mb-3 mb-sm-0">
-              <div class="text-center">
-                <h5 class="h1">30,000+</h5>
-                <p>目标服务医院</p>
-              </div>
-            </div>
-            <!-- End Col -->
-          </div>
-          <!-- End Row -->
-
-
-
-          <hr>
 
           <div class="row justify-content-lg-between align-items-lg-start" style="margin-top:3rem;margin-bottom:2rem;">
     
@@ -823,163 +918,6 @@
 
 
           </div>
-<!-- 
-          <div class="container bg-light p-5 rounded-2">
-            <div class="mb-3">
-              <h2 class="text-dark text-center content-space-1">博志核心</h2>
-            </div>
-            <div class="row">
-              <div class="col-md-4 mb-5 mb-md-0">
-                <div class="text-center ">
-                  <div class="svg-icon text-primary mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reception-4" viewBox="0 0 16 16">
-                      <path d="M0 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-5zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-8zm4-3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v11a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-11z"/>
-                    </svg>
-      
-                  </div>
-                  <h3>需求端</h3>
-                  <p>40+全国顶级大主任支持及威高骨科全国渠道，积累万例临床数据及数十次迭代市场反馈</p>
-                </div>
-              </div>
-      
-              <div class="col-md-4 mb-5 mb-md-0">
-                <div class="text-center">
-                  <div class="svg-icon text-primary mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
-                    </svg>
-      
-                  </div>
-                  <h3>供给端</h3>
-                  <p>跨越市场进入壁垒，已获发明专利及药监局注册证</p>
-                </div>
-              </div>
-      
-              <div class="col-md-4">
-                <div class="text-center">
-                  <div class="svg-icon text-primary mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-safe-fill" viewBox="0 0 16 16">
-                      <path d="M9.778 9.414A2 2 0 1 1 6.95 6.586a2 2 0 0 1 2.828 2.828z"/>
-                      <path d="M2.5 0A1.5 1.5 0 0 0 1 1.5V3H.5a.5.5 0 0 0 0 1H1v3.5H.5a.5.5 0 0 0 0 1H1V12H.5a.5.5 0 0 0 0 1H1v1.5A1.5 1.5 0 0 0 2.5 16h12a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 14.5 0h-12zm3.036 4.464 1.09 1.09a3.003 3.003 0 0 1 3.476 0l1.09-1.09a.5.5 0 1 1 .707.708l-1.09 1.09c.74 1.037.74 2.44 0 3.476l1.09 1.09a.5.5 0 1 1-.707.708l-1.09-1.09a3.002 3.002 0 0 1-3.476 0l-1.09 1.09a.5.5 0 1 1-.708-.708l1.09-1.09a3.003 3.003 0 0 1 0-3.476l-1.09-1.09a.5.5 0 1 1 .708-.708zM14 6.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 1 0z"/>
-                    </svg>
-      
-                  </div>
-                  <h3>技术壁垒</h3>
-                  <p>技术团队20余年科研及产品研发积累（骨质量检测、手术规划及个体化耗材；团队获中国首个三类骨水泥材料）</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-
-
-          <!-- <div class="row" style="padding-top:5rem!important;">
-            <div class="col-lg-12 mb-9 mb-lg-0">
-              <div class="mb-3">
-                <h2 class="text-dark text-center">博志团队</h2>
-              </div>
-              <p class="text-justify mb-5">
-                博志生物创始团队满足“people and mission fit”，有强大的使命感和行业经验。团队在智能骨科领域已积累20多年科研及行业经验，核心团队主要由海归博士及行业专家组成，成员来自香港大学、滑铁卢大学、牛津大学、约翰霍普金斯大学、哥伦比亚大学、中科院等海内外著名科研院所。临床研究由香港大学、香港玛丽医院、港大深圳医院、中科院先进技术研究院等机构支持，具备持续创新能力及人才储备。
-              </p>
-
-            </div>
-          </div> -->
-    
-      </div>
-<hr>
-      </div>
-      <!-- End Intro -->
-<!-- 
-      <div class="position-relative bg-light rounded-2 mx-3 mx-lg-10" id="Solutions">
-        <div class="container content-space-2">
-
-          <div class="w-md-75 w-lg-50 text-center mx-md-auto">
-          <h2 class="h1">解决方案</h2>
-          <p>Solutions</p>
-        </div>
-
-        <div class="row justify-content-center content-space-1 mb-5">
-          <div class="col-sm-6 col-md-4 mb-7 mb-md-0">
-            <div class="text-center">
-              <h2 class="h2"><i class="bi bi-check-all text-primary"></i> 全智能诊断</h2>
-              <p class="mb-0">全智能诊断，一站式服务</p>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 mb-7 mb-md-0">
-            <div class="text-center">
-              <h2 class="h2"><i class="bi-arrow-up-short text-success"></i> 90%诊断准确率</h2>
-              <p class="mb-0">精准诊疗</p>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4">
-            <div class="text-center">
-              <h2 class="h2"><i class="bi-arrow-down-short text-danger"></i> ¼ 成本</h2>
-              <p class="mb-0">仅需传统方案的¼成本，实现普惠医疗</p>
-            </div>
-          </div>
-        </div>
-
-
-          <div class="row">
-            <div class="col-lg-6 mb-9 mb-lg-0">
-              <div class="pe-lg-6">
-                <figure class="device-browser">
-                  <div class="device-browser-header" style="display: flex;justify-content: center;">
-                    <img src="./assets/svg/logos/bones-en.svg" alt="" style="width:20%";>
-                    <strong style="color:#0066DA;font-size:21px;">&nbsp;MATRIX</strong>
-                  </div>
-  
-                  <div class="device-browser-frame" style="padding-bottom:2rem;">
-                    <img class="device-browser-img" src="./static/images/background/Bones Surgispace1.png" alt="Image Description" width="100%">
-                       
-          <div id="youTubeVideoPlayer" class="video-player video-player-inline-btn">
-            <img class="img-fluid video-player-preview" src="./static/images/background/chuttersnap-1eL99eGXp0g-unsplash.jpg" alt="Image">
-
-            <a class="js-inline-video-player video-player-btn video-player-centered" href="javascript:;"
-              data-hs-video-player-options='{
-               "videoId": "d4eDWc8g0e0",
-               "parentSelector": "#youTubeVideoPlayer",
-               "targetSelector": "#youTubeVideoIframe",
-               "isAutoplay": true
-             }'>
-              <span class="video-player-icon shadow-sm">
-                <i class="bi-play-fill"></i>
-              </span>
-            </a>
-
-            
-            <div class="ratio ratio-16x9">
-              <div id="youTubeVideoIframe"></div>
-            </div>
-     
-          </div>
-                  </div>
-                </figure>
-              </div>
-            </div>
-  
-            <div class="col-lg-6">
-              <div class="mb-4 py-2">
-                <h2 class="h2 text-primary">博志成功研发
-                  <br>
-                  全球首个骨科智能诊疗一体机</h2>
-                <p>人体骨骼数字化 / 通过完整产品矩阵 / 提高骨科诊疗效果
-                  </p>
-              </div>
-              
-              <ul class="list-checked list-checked-primary mb-5">
-                <li class="list-checked-item">覆盖90%骨疾病诊断</li>
-                <li class="list-checked-item">个体化设计手术方案</li>
-                <li class="list-checked-item">设计可编程式植入物及导板</li>
-                <li class="list-checked-item">智能大脑赋能机器人/导航</li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div> -->
 
       <!-- Step -->
       <div id="learnSection" class="container content-space-2">
@@ -1241,9 +1179,9 @@
 
               <div class="row justify-content-center">
         
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none  border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/wwlu.png" alt="Image Description">
@@ -1260,9 +1198,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/mma.png" alt="Image Description">
@@ -1279,9 +1217,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/qh.png" alt="Image Description">
@@ -1297,9 +1235,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/lcy.png" alt="Image Description">
@@ -1315,9 +1253,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/wxh.png" alt="Image Description">
@@ -1336,9 +1274,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/kd.png" alt="Image Description">
@@ -1355,9 +1293,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/cheng.png" alt="Image Description">
@@ -1374,9 +1312,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/wtc.png" alt="Image Description">
@@ -1393,11 +1331,11 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150" >
                     <div class="card-body text-center" style="padding:1rem;">
-                      <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/liangliang.png" alt="Image Description">
+                      <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/liangliang.png" alt="Image Description" >
                       <h5 class="card-title text-inherit">王良亮</h5>
                       <p class="card-text text-body small">机器人研发负责人
                         <br>
@@ -1410,13 +1348,13 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/cw.png" alt="Image Description">
                       <h5 class="card-title text-inherit">王晨</h5>
-                      <p class="card-text text-body small">设计负责人
+                      <p class="card-text text-body small">产品设计负责人
                         <br>
                         日本高知工科大学 人机交互博士
                       </p>
@@ -1427,9 +1365,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     <div class="card-body text-center" style="padding:1rem;">
                       <img class="card-img-top avatar-img avatar avatar-xxxxl avatar-circle mb-4 mt-2" src="./static/images/team/yjh.png" alt="Image Description">
@@ -1445,27 +1383,6 @@
                 </div>
                 <!-- End Col -->
 
-                <!-- <div class="col-md-3 mb-3">
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
-                    <img class="card-img-top" src="./static/images/team/yolanda.png" alt="Image Description">
-                    
-                    <div class="card-body">
-                      <h3 class="card-title text-inherit">李小沉</h3>
-                      <p class="card-text text-body">财务部负责人
-                        <br>
-                        云南白药全球业务发展部 <br>
-德意志银行投行部医疗组<br>
-香港大学公卫硕士
-
-                      </p>
-                    </div>
-        
-                  </a>
-
-                </div> -->
-                <!-- End Col -->
-
-
                 
               </div>
         
@@ -1476,9 +1393,9 @@
 
               <div class="row justify-content-center" style="margin-bottom: 5rem!important;">
         
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     
                     <div class="card-body text-center" style="padding:1rem;">
@@ -1503,9 +1420,9 @@
                 </div>
                 <!-- End Col -->
 
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-4">
                   <!-- Card -->
-                  <a class="card card-transition h-100 aos-init aos-animate" data-aos="fade-up" data-aos-delay="150">
+                  <a class="card card-transition h-100 aos-init aos-animate shadow-none border border-1" data-aos="fade-up" data-aos-delay="150">
                     
                     
                     <div class="card-body text-center" style="padding:1rem;">
@@ -2175,6 +2092,21 @@
   <!-- ========== SECONDARY CONTENTS ========== -->
   <!-- Go To -->
   <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
+    "offsetTop": 700,
+    "position": {
+      "init": {
+        "right": "2rem"
+      },
+      "show": {
+        "bottom": "10rem"
+      },
+      "hide": {
+        "bottom": "-2rem"
+      }
+    }
+  }'>
+  <img src="./static/barcodes/WechatQRCode.png" alt="" style="width:80%" class="ml-n3" >
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
        "offsetTop": 700,
        "position": {
          "init": {
@@ -2206,9 +2138,12 @@
   <script src="./assets/vendor/hs-scrollspy/dist/hs-scrollspy.min.js"></script>
   <script src="./assets/vendor/fslightbox/index.js"></script>
   <script src="./assets/vendor/typed.js/lib/typed.min.js"></script>
+  <script src="./assets/vendor/appear/dist/appear.min.js"></script>
   <script src="./assets/vendor/hs-video-player/dist/hs-video-player.min.js"></script>
   <script src="./assets/vendor/hs-video-bg/dist/hs-video-bg.min.js"></script>
   <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="./assets/vendor/circles.js/circles.js"></script>
+
 
   <!-- JS Front -->
   <script src="./assets/js/theme.min.js"></script>
@@ -2276,6 +2211,12 @@
         duration: 650,
         once: true
       });
+
+      // INITIALIZATION OF CIRCLES
+      // =======================================================
+      setTimeout(() => {
+        HSCore.components.HSCircles.init('.js-circle')
+      })
 
       // INITIALIZATION OF TEXT ANIMATION (TYPING)
       // =======================================================
