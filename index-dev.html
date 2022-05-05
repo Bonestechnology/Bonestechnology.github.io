@@ -2092,6 +2092,13 @@
   <!-- JS Plugins Init. -->
   <script>
     (function () {
+      
+      const BilibiliBar = document.querySelectorAll('.bilibili-player-video-jump-to-bilibili-detail-bar');
+
+      BilibiliBar.forEach(BilibiliBarItem => {
+        BilibiliBarItem.remove();
+      });
+
       // INITIALIZATION OF HEADER
       // =======================================================
       new HSHeader('#header').init()
